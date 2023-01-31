@@ -1,0 +1,24 @@
+.service {
+  margin-top: 15px;
+
+  &__item {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    border-radius: 5px;
+  }
+
+  &__item span i {
+    padding: 10px;
+    font-size: 60px;
+    border-radius: 50px;
+    background: var(--primary-color);
+    color: #fff;
+  }
+
+  &__item h3 {
+    font-size: 24px;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,41 @@
+.product {
+  &__item {
+    padding-bottom: 20px;
+    background-color: rgb(251, 251, 251);
+  }
+
+  .product__img img {
+    transition-duration: 1s;
+  }
+
+  &__name {
+    padding: 15px 0 10px;
+  }
+
+  &__name a {
+    color: var(--primary-color);
+  }
+
+  &__name:hover a {
+    color: inherit;
+  }
+
+  &__cart-buttom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10px 0;
+
+    & span i {
+      padding: 8px;
+      border-radius: 50px;
+      background: var(--primary-color);
+      color: #fff;
+    }
+  }
+
+  &__cart-price {
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
