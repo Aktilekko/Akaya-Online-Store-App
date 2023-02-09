@@ -16,12 +16,13 @@
   }
 
   &__subtitle {
+    color: var(--primary-color);
     font-weight: 500;
   }
 
   &__title {
     color: var(--primary-color);
-    font-size: 2.5 rem;
+    font-size: 2.5rem;
     font-weight: 600;
     padding: 20px 0;
   }
@@ -84,4 +85,67 @@
 
 .best__sales {
   padding-top: 0;
+}
+
+@media screen and (max-width: 992px) {
+  .hero {
+    &__title {
+      font-size: 1.7rem;
+    }
+  }
+
+  .section__title {
+    font-size: 1.6rem;
+  }
+
+  .counter__img {
+    display: none;
+  }
+
+  .timer__top {
+    text-align: center;
+
+    & h4 {
+      font-size: 0.9rem !important;
+    }
+
+    & h3 {
+      font-size: 1rem !important;
+    }
+  }
+
+  .timer__down-col {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero {
+    &__container {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    &__left,
+    &__right {
+      width: 100%;
+    }
+
+    &__left {
+      margin-bottom: 30px;
+    }
+
+    &__title {
+      font-size: 1.6rem;
+    }
+
+    &__info {
+      font-size: 0.9rem;
+    }
+  }
+
+  .buy__btn {
+    font-size: 0.9rem;
+  }
 }

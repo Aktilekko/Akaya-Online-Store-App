@@ -1,0 +1,47 @@
+.footer {
+  padding: 60px 0 30px;
+  background: var(--primary-color);
+
+  & h1 {
+    color: #fff;
+    padding-bottom: 30px;
+  }
+
+  &__text {
+    color: rgb(233, 233, 233);
+  }
+
+  &__quick-links ul li {
+    background: transparent !important;
+  }
+
+  &__quick-links ul li a {
+    color: rgb(233, 233, 233);
+  }
+
+  &__contact li span,
+  &__contact li p {
+    color: rgb(233, 233, 233) !important;
+  }
+
+  &__contact li span {
+    font-size: 1.2rem;
+  }
+
+  &__contact li p {
+    font-size: 0.9rem;
+  }
+}
+
+.quick__links-title {
+  margin-bottom: 20px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.footer__copyright {
+  color: rgb(233, 233, 233);
+  font-size: 0.9rem;
+  padding-top: 40px;
+  text-align: center;
+}

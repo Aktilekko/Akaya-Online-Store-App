@@ -15,20 +15,34 @@ const Clock = () => {
     interval = setInterval(() => {
       const now = new Date().getTime();
       const different = destination - now;
-      const days = Math.floor(different / (1000 * 60 * 60 * 24));
+      const days = Math.floor(different / (1000 * 60 * 60 * 24 * -1));
       const hours = Math.floor(
-        (different % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        (different % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60 * -1)
       );
-      const minutes = Math.floor((different % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((different % (1000 * 60)) / 1000);
+      const minutes = Math.floor(
+        (different % (1000 * 60 * 60)) / (1000 * 60 * -1)
+      );
+      const seconds = Math.floor(((different % (1000 * 60)) / 1000) * -1);
+
+      if (destination < 0) clearInterval(interval.current);
+      else {
+        setDays(days);
+        setHours(hours);
+        setMinutes(minutes);
+        setSeconds(seconds);
+      }
     });
   };
+
+  useEffect(() => {
+    countDown();
+  });
 
   return (
     <div className="clock">
       <div className="clock__data">
         <div className="text-center">
-          <h1 className="text-white fs-3 pb-2">10 </h1>
+          <h1 className="text-white fs-3 pb-2">{days}</h1>
           <h5 className="text-white fs-6">Days</h5>
         </div>
         <span className="text-white fs-3">:</span>
@@ -36,7 +50,7 @@ const Clock = () => {
 
       <div className="clock__data">
         <div className="text-center">
-          <h1 className="text-white fs-3 pb-2">10 </h1>
+          <h1 className="text-white fs-3 pb-2">{hours}</h1>
           <h5 className="text-white fs-6">Hours</h5>
         </div>
         <span className="text-white fs-3">:</span>
@@ -44,7 +58,7 @@ const Clock = () => {
 
       <div className="clock__data">
         <div className="text-center">
-          <h1 className="text-white fs-3 pb-2">10 </h1>
+          <h1 className="text-white fs-3 pb-2">{minutes}</h1>
           <h5 className="text-white fs-6">Minutes</h5>
         </div>
         <span className="text-white fs-3">:</span>
@@ -52,7 +66,7 @@ const Clock = () => {
 
       <div className="clock__data">
         <div className="text-center">
-          <h1 className="text-white fs-3 pb-2">10 </h1>
+          <h1 className="text-white fs-3 pb-2">{seconds}</h1>
           <h5 className="text-white fs-6">Seconds</h5>
         </div>
         <span className="text-white fs-3">:</span>

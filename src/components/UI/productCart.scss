@@ -20,7 +20,7 @@
     color: inherit;
   }
 
-  &__cart-buttom {
+  &__card-buttom {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,11 +31,32 @@
       border-radius: 50px;
       background: var(--primary-color);
       color: #fff;
+      cursor: pointer;
     }
   }
 
-  &__cart-price {
+  &__card-price {
     font-size: 20px;
     font-weight: 500;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .product {
+    &__info h3 a {
+      font-size: 1.3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .product {
+    &__info h3 a {
+      font-size: 1.1rem;
+    }
+
+    &__card-buttom span i {
+      font-size: 1rem;
+    }
   }
 }

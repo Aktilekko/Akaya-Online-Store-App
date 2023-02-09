@@ -9,3 +9,17 @@
     gap: 10px;
   }
 }
+
+@media screen and (max-width: 992px) {
+  .clock {
+    justify-content: center;
+
+    &__data h1 {
+      font-size: 1.1rem !important;
+    }
+
+    &__data h5 {
+      font-size: 0.9rem;
+    }
+  }
+}
